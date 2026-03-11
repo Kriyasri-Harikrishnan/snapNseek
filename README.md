@@ -77,7 +77,7 @@ The application is fully serverless and hosted on AWS in the `ap-south-1` (Mumba
 
 ---
 
-## 👩‍💻 Setup & Deployment
+## 👩‍💻 Setup & Config
 
 ### Prerequisites
 - AWS CLI configured with appropriate IAM permissions
