@@ -54,42 +54,6 @@ The application is fully serverless and hosted on AWS in the `ap-south-1` (Mumba
 
 ---
 
-## 🗂️ Project Structure
-
-```
-snap-and-seek/
-├── frontend/                  # React SPA (hosted on Amplify)
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── GCVADisplay.jsx       # Google Vision results renderer
-│   │   │   ├── Header.jsx            # Top nav with dark mode toggle
-│   │   │   ├── ImageUpload.jsx       # Upload logic
-│   │   │   ├── OptionSelector.jsx    # Pipeline selector (eBay / Rekog / GCV)
-│   │   │   ├── ProductCard.jsx       # eBay product result card
-│   │   │   ├── ResultsDisplay.jsx    # Results panel
-│   │   │   └── UploadBox.jsx         # Drag-and-drop upload box
-│   │   └── pages/
-│   │       └── Home.jsx              # Main page with full search flow
-│
-├── backend/                   # Flask app deployed on AWS Lambda
-│   ├── routes/
-│   │   ├── upload_routes.py          # S3 upload + SNS trigger
-│   │   ├── ebay_routes.py            # eBay image search
-│   │   ├── rekog_routes.py           # Rekognition + eBay keyword search
-│   │   ├── gcva_routes.py            # Google Cloud Vision web detection
-│   │   └── metrics_routes.py         # CloudWatch custom metrics endpoint
-│   ├── services/
-│   │   └── aws_clients.py            # Centralized boto3 client initialization
-│   ├── utils/
-│   │   └── logger.py                 # Watchtower CloudWatch logger setup
-│   ├── application.py                # Flask app entry point, blueprint registration
-│   ├── config.py                     # Environment variable config
-│   ├── lambda_function.py            # AWS Lambda handler (serverless_wsgi)
-│   ├── preflight_lambda.py           # Dedicated CORS preflight Lambda
-│   └── requirements.txt
-```
----
-
 ## 💻 Tech Stack
 
 **Frontend**
